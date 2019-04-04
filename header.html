@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Texas TSA Header</title>
+</head>
+
+<body>
+	
+<header class="header-bottom">
+	<div class="flex-c">	
+		<button class="ui-button hamburger">Hamburger</button>
+		<div class="logo">
+			logo
+		</div>
+		<div class="site-navigation">
+			site navigation
+		</div>
+		<form>
+			search
+		</form>
+	</div>
+</header>
+	
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+	
+<script type="text/javascript">
+
+$(document).ready(function () {
+  
+  'use strict';
+  
+   var c, currentScrollTop = 0,
+       navbar = $('.header-bottom');
+
+   $(window).scroll(function () {
+      var a = $(window).scrollTop();
+      var b = navbar.height();
+     
+      currentScrollTop = a;
+     
+      if (c < currentScrollTop && a > b + b) {
+        navbar.addClass("scrollUp");
+      } else if (c > currentScrollTop && !(a <= b)) {
+        navbar.removeClass("scrollUp");
+      }
+      c = currentScrollTop;
+  });
+  
+});
+	
+</script>
+
+<style type="text/css">
+	
+	body {
+		margin: 0;
+		padding: 0;
+		height: 1200px;
+		font-family: sans-serif;
+	}
+	
+	.flex-c {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 24px;
+	}
+
+	.header-bottom {
+		border-bottom: 1px solid #eee;
+		height: 55px;
+		transition: top 400ms ease 0s;
+		-webkit-transition: top 400ms ease 0s;
+	}
+	
+	.header-bottom {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 5;
+	}
+	
+	.scrollUp {
+		top: -65px;
+	}
+	
+	.header-bottom .flex-c {
+		display: flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		align-items: center;
+		-webkit-box-align: center;
+		-ms-align-items: center;
+		height: 100%;
+	}
+
+	
+</style>
+	
+</body>
+</html>
