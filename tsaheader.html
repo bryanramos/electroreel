@@ -1,0 +1,101 @@
+<header class="global-header">
+    <div class="bounds">
+        <div class="logo-wrapper">
+            <a href="#add-later">
+                <img class="logo"/ alt="Texas TSA Logo">
+                <!-- hide -->
+                <div class="seo-branding">
+                    <h4 class="site-title" aria-label="Texas Technology Student Association">Texas Technology Student Association</h4>
+                    <h6 class="site-description" arial-label="Inspiring students to learn in a technical world">Inspiring students to learn in a technical world</h6>
+                </div>
+            </a>
+        </div>
+        <div class="navigation-wrapper">
+        </div>
+        <button class="header-button search-button" aria-label="Open search">
+            <i class="material-icons notranslate">search</i>
+            <span>Search</span>
+        </button>
+        <button class="header-button menu-button" aria-label="Mobile menu">
+            <i class="material-icons notranslate">menu</i>
+            <span>Menu</span>
+        </button>
+    </div>
+</header>
+
+<style type="text/css">
+
+/* 
+    Copyright (c) Texas TSA
+    Author: Bryan Ramos
+*/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font: 400 17px/22px sans-serif;
+    height: 3000px; /* for testing */
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.bounds { /* wrapper container */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+}
+
+@media screen and (max-width: 48em) {
+    .bounds {
+        padding: 0 10px;
+    }
+}
+
+.bounds { /* flex container */
+    display: flex;
+    align-items: center;
+}
+
+.global-header { /* texas tsa main header */
+    box-shadow: 2px 10px 20px rgba(0, 0, 0, .05); 
+    height: 69px;
+    position: sticky;
+    top: 0;
+}
+
+.global-header bounds {
+    height: 100%;
+}
+
+.global-header .logo-wrapper {
+    margin-right: 10px;
+}
+
+.global-header .navigation-wrapper {
+    flex: 1 0 auto;
+}
+
+h4.site-title {
+    margin: 0;
+    padding: 0;
+}
+
+h6.site-description {
+    margin: 0;
+    padding: 0;
+}
+
+.header-button { 
+    height: 40px;
+    background: none;
+    border: none;
+    font-size: 14px;
+}
+
+
+
+</style>
